@@ -52,3 +52,8 @@ extract_mail = set(extract_mail_wd)
 
 extracted_data = '===PHONE NUMBERS===\n' + '\n'.join(phone_numbers) + '\n' + '===EMAILS===\n' + '\n'.join(extract_mail)
 pyperclip.copy(extracted_data)
+
+# If you want to import all the extracted data into a txt file you can run line:
+
+data_file = open("C:\\Users\\alexp\\Documents\\data_file.txt", 'a') # here you have to change the path for your txt file.
+data_file.write(pyperclip.paste())
